@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.ideal.mdb</groupId>
+  <artifactId>ideal.mdb</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>ideal.mdb</name>
+  <url>http://maven.apache.org</url>
+	<properties>
+			<springfox.swagger2.version>2.6.1</springfox.swagger2.version>
+			<springfox.swagger.ui.version>2.6.1</springfox.swagger.ui.version>
+	</properties>
+  <profiles>
+  	<profile>
+			<id>jdk</id>
+			<properties>
+			    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+			      <maven.compiler.source>1.8</maven.compiler.source>
+			      <maven.compiler.target>1.8</maven.compiler.target>
+			      <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+			</properties>
+			<activation>
+				<jdk>1.8</jdk>
+			</activation>
+		</profile>
+  </profiles>
+  <dependencies>
+  		<dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox.swagger2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox.swagger.ui.version}</version>
+        </dependency>
+  </dependencies>
+</project>
