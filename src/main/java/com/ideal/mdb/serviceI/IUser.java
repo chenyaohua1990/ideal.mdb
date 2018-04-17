@@ -10,7 +10,7 @@ public interface IUser {
 	 * @param user
 	 * @return
 	 */
-	public String login(User user);
+	public User login(User user);
 	/**
 	 * 用户列表
 	 * @param user

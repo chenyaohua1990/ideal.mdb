@@ -19,6 +19,8 @@ public class User implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 3384804783113366178L;
+	@ApiModelProperty(name="id",value="ID",example="1")
+	private String id;
 	@ApiModelProperty(name="name",value="用户名",example="张三")
 	private String name;
 	@ApiModelProperty(name="password",value="密码",example="12345x6")
@@ -27,6 +29,15 @@ public class User implements Serializable{
 	private String email;
 	@ApiModelProperty(name="addressList",value="地址集合")
 	private List<Address> addressList;
+	
+	
+	public String getId() {
+		return id;
+	}
+	@XmlElement(name="ID")
+	public void setId(String id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}
